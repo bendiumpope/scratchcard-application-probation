@@ -1,0 +1,99 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    background-image:url(../image/Mtn.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: black;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+#header1 h1{
+    margin:0px;
+    position:absolute;
+    top:40px;
+    left:40px;
+    font-family: tahoma;
+    font-size:30px;
+    display:block;
+    
+    }
+#header1 h3{
+    margin:5px;
+    position:absolute;
+    top:70px;
+    left:40px;
+    font-family: tahoma;
+    font-size:1em;
+    }
+
+    #login{
+        width: 70%;
+        margin:auto;
+        padding-left: 110px;
+        padding-top:10px;
+        padding-bottom:10px;
+    }
+
+    #loginInput {
+        background-color: purple;
+        margin-top:30px;
+        width: 30%;
+        height:160px;
+        display: inline-block;
+        color:black;
+        padding-left: 110px;
+        padding-top:10px;
+        padding-bottom:10px;
+    }
+    #signupInput {
+        margin-top:80px;
+        width: 35%;
+        display: inline-block;
+        background-color: purple;
+        color:black; 
+        padding-left: 110px;
+        padding-top: 2px;
+        padding-bottom:10px;
+    }
+
+    #loginInput input{
+        display:block;
+        height:30px;
+        width:50%;
+        border:2px black solid;
+    }
+    #signupInput input{
+        display:block;
+        height:30px;
+        width:50%;
+        border:2px black solid;
+    }
+
+    #loginInput button{
+        width:30%;
+        padding:5px;
+    }
+    #signupInput button{
+        width:30%;
+        padding:5px;
+    }
+
+    .flt1 {
+        margin-top:30px;
+        padding-left: 50px;
+        width: 45%;
+        display: inline-block;
+        color:black;
+        
+    }
+    .flt2 {
+        margin-top:50px;
+        width: 45%;
+        display: inline-block;
+        color:black;
+        
+    }
