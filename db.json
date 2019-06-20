@@ -1,0 +1,90 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "firstName": "benedict",
+      "lastName": "ama",
+      "state": "Kebbi",
+      "local": "Birnin kebbi",
+      "email": "benmria@yahoo.com",
+      "password": "666666"
+    },
+    {
+      "firstName": "Maria",
+      "lastName": "Ama",
+      "state": "Imo",
+      "local": "obowo",
+      "email": "amamaria@gmail.com",
+      "password": "1234567",
+      "id": 2
+    },
+    {
+      "firstName": "charles",
+      "lastName": "dioha",
+      "state": "abuja",
+      "local": "kubwa",
+      "email": "charles@yahoo.com",
+      "password": "1234567",
+      "id": 3
+    },
+    {
+      "firstName": "judith",
+      "lastName": "mariae",
+      "state": "imo",
+      "local": "ahiazu",
+      "email": "judith@yahoo.com",
+      "password": "benmahtu",
+      "id": 4
+    },
+    {
+      "firstName": "mikah",
+      "lastName": "paul",
+      "state": "kebbi",
+      "local": "zuru",
+      "email": "mikah@yahoo.com",
+      "password": "1234567",
+      "id": 5
+    },
+    {
+      "firstName": "keyna",
+      "lastName": "aguwa",
+      "state": "Sokoto",
+      "local": "Sokoto",
+      "email": "kenaaguwa@gmail.com",
+      "password": "chivanben",
+      "id": 6
+    }
+  ],
+  "pin": [
+    {
+      "pin": "23530589184",
+      "serial": "DWbr2EKHEw",
+      "date": "2019-06-03",
+      "id": 3
+    },
+    {
+      "pin": "09263948248",
+      "serial": "hXFQeWCgMr",
+      "date": "2019-06-12",
+      "id": 6
+    },
+    {
+      "pin": "22945289688",
+      "serial": "Ti6vjgqMIF",
+      "date": "2019-06-19",
+      "id": 9
+    },
+    {
+      "pin": "19817124306",
+      "serial": "zTBKb91G0s",
+      "date": "2019-06-19",
+      "id": 10
+    },
+    {
+      "pin": "58177660023",
+      "serial": "rJjxuPBstd",
+      "date": "2019-06-19",
+      "id": 11
+    }
+  ]
+}
