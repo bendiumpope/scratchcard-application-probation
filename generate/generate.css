@@ -7,12 +7,12 @@ body{
     background-image:url(../image/cs.gif);
     background-repeat: no-repeat;
     background-size: 100%;
-    color: black;
+    color: white;
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
 #navGen{
-    background-color:purple;
+    background-color:black;
     margin-top: 5px;
 }
 
@@ -36,7 +36,7 @@ body{
 }
 
 .li{
-    color: black;
+    color:white;
     text-decoration: none;
 
 }
@@ -60,25 +60,26 @@ body{
     font-size:1em;
     }
 
-    #dataDisplay{
-        width: 60%;
-        margin-top:10%;
-        margin-left:15%;
-        border: 2px solid black;
-        padding-left: 110px;
-        padding-top:10px;
-        padding-bottom:10px;
-        background-color:purple;
+    #dbOut{
+        width: 50%;
+        height: 100px;
+        margin-top:5%;
+        margin-left:5%;
+        padding: 20px;
+        background-color:black;
+        color:white;
     }
 
     #container{
         position: fixed;
-        top:75%;
-        left:10px;
-        width:40%;
+        top:50px;
+        bottom:90%;
+        right:10px;
+        width:30%;
+        height:120px;
         padding:5px;
-        background-color:purple;
-        color:black;
+        background-color:black;
+        color:white;
     }
 
     #container h3{
@@ -86,14 +87,33 @@ body{
     }
     #container button{
         margin-left:30%;
-        display:inline-block;
+        display:block;
         width:40%;
         height:40px;
     }
+    #container input{
+        margin-left:30%
+    }
     #display{
-        /*top:100px;*/
-        margin-top:10px;
-        margin-left:0;
-        font-size:1em;        
+        display:block;
+    }
+    #veiw{
+        position: fixed;
+        top:200px;
+        bottom:50%;
+        right:10px;
+        width:30%;
+        height:110px;
+        padding:5px;
+        background-color:black;
+        color:white;
     }
 
+    #veiw h4[first-child]{
+        text-align:center
+    }
+    #veiw button{
+       
+        width:10%;
+        height:30px;
+    }

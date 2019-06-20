@@ -7,7 +7,7 @@ body{
     background-image:url(../image/Mtn.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    color: black;
+    color: white;
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
@@ -39,12 +39,12 @@ body{
     }
 
     #loginInput {
-        background-color: purple;
+        background-color: black;
         margin-top:30px;
         width: 30%;
         height:160px;
         display: inline-block;
-        color:black;
+        color:white;
         padding-left: 110px;
         padding-top:10px;
         padding-bottom:10px;
@@ -53,8 +53,8 @@ body{
         margin-top:80px;
         width: 35%;
         display: inline-block;
-        background-color: purple;
-        color:black; 
+        background-color: black;
+        color:white; 
         padding-left: 110px;
         padding-top: 2px;
         padding-bottom:10px;

@@ -38,7 +38,6 @@ $( document ).ready(function(){
         )
         })
     })
-    })
     
     //Login Code
     $('#loginInput').on('submit',function(e){
@@ -65,15 +64,16 @@ $( document ).ready(function(){
         
         //Checking if the email already exists on the database and giving or restricting access
         for(var i=0; i<userArray.length; i++){
-            if(userArray[i]==user.email && passwordArray[i]==user.password){
-    
+            if(userArray[i]==user.email){
+                if(passwordArray[i]==user.password){
                 return window.location.href="../generate/generate.html";
-            }else if((userArray[i]==user.email && passwordArray[i]!=user.password) || (userArray[i]!=user.email && passwordArray[i]==user.password)){
-                return alert("Wrong Email or Password")
+                }else{
+                    return alert("Wrong login details");
+                }
             }
         }
             return alert("Please Sign Up");
         })
     
     })
-    
+     })
