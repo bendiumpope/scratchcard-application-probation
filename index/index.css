@@ -4,10 +4,10 @@
 }
 
 body{
-    background-image:url(../image/Mtn.png);
+    background-image:url(../image/yello1.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
-    color: white;
+    color: black;
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
@@ -31,6 +31,8 @@ body{
     }
 
     #login{
+        /* border:5px black solid; */
+        
         width: 70%;
         margin:auto;
         padding-left: 110px;
@@ -41,6 +43,7 @@ body{
     #loginInput {
         background-color: black;
         margin-top:30px;
+        margin-left:100px;
         width: 30%;
         height:160px;
         display: inline-block;
@@ -83,6 +86,7 @@ body{
     }
 
     .flt1 {
+        font-size:1.5em;
         margin-top:30px;
         padding-left: 50px;
         width: 45%;
@@ -91,6 +95,7 @@ body{
         
     }
     .flt2 {
+        font-size: 1.5em;
         margin-top:50px;
         width: 45%;
         display: inline-block;
