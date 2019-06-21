@@ -1,0 +1,19 @@
+{
+  "name": "scratchcard-application",
+  "version": "1.0.0",
+  "description": "A recharge card generation and validation project",
+  "main": "jquery-3.4.1.min.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bendiumpope/scratchcard-application-probation.git"
+  },
+  "author": "Benedict",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bendiumpope/scratchcard-application-probation/issues"
+  },
+  "homepage": "https://github.com/bendiumpope/scratchcard-application-probation#readme"
+}
