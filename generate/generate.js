@@ -66,8 +66,11 @@ $("#generate").on("click",function(e){
     });
 
     function dataBase(pin){
-        $dbOut.append('<tr><td>'+pin.pin+'</td><td>'+pin.serial+
-        '</td><td>'+pin.date+'</td><td><button id="'+pin.id+'"class="dlt">Delete</button></td></tr>');
+        $dbOut.append('<tr><td>'+pin.id+'</td><td>'+pin.pin+'</td><td>'+pin.serial+
+        '</td><td id="'
+        +pin.id+'"><span class=noEdit date>'+pin.date+'</span><input type="date" class="edit date"></td><td><button id="'
+        +pin.id+'"class="dlt">Delete</button></td><td><button class="editDate noEdit">Edit</button>'+" "+'<button class="saveEdit edit" id="'
+        +pin.id+'">save</button>'+" "+'<button class="cancelEdit edit">Cancel</button></td></tr>');
        // console.log(pin.id);
     }
      
@@ -118,4 +121,70 @@ $("#generate").on("click",function(e){
     })
 });
 
+$dbOut.delegate(".editDate","click",function(e){
+    e.preventDefault();
+    
+    tr=(this).closest("tr");
+
+    $(tr).find('input.date').val($(tr).find('span.date').html());
+    $(tr).addClass("edit");
+})
+
+$dbOut.delegate(".cancelEdit","click",function(e){
+    e.preventDefault();
+ 
+    $(this).closest("tr").removeClass("edit");     
+})
+
+$dbOut.delegate(".saveEdit","click",function(e){
+    e.preventDefault();
+ 
+    var tr = $(this).closest("tr"); 
+    var date = $(tr).find('input.date').val();
+    var id = $(this).attr("id");
+
+    console.log(date);
+    var pinArray=[];
+    var serialArray=[];
+    var idArray=[];
+    var pin={};
+    
+
+    $.getJSON('http://localhost:3000/pin',function(data){
+        $.each(data,function(i,pin){
+            idArray.push(pin.id);
+            pinArray.push(pin.pin);
+            serialArray.push(pin.serial);
+        })
+        
+        for(var i=0; i<idArray.length; i++){
+             if(idArray[i]==id){
+                 pin["pin"] = pinArray[i];
+                 pin["serial"] = serialArray[i];
+                 pin["date"]=date;
+             }
+             
+        }
+
+        // return console.log(pin.date);
+
+    $.ajax({
+        type:"PUT",
+        url:"http://localhost:3000/pin/"+id,
+        data:pin,
+        success:function(pin){
+
+            $(tr).find("span.date").html(date);
+            $(tr).removeClass("edit");
+            
+            alert("Date Updated successfully");
+            return window.location.href="generate.html";
+        },
+        error:function(){
+            return alert("An error occured");
+        }
+    });  
+})
+
+})
 })

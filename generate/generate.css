@@ -117,3 +117,15 @@ body{
         width:10%;
         height:30px;
     }
+
+    table tr .edit{
+        display:none;
+    }
+
+    table tr.edit .edit{
+        display:initial;
+    }
+
+    table tr.edit .noedit{
+        display:none;
+    }
