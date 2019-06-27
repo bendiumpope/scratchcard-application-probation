@@ -47,8 +47,7 @@ $( document ).ready(function(){
     
         var userArray =[];
         var passwordArray=[];
-        // var email = $('#email').val();
-        // var password=$('#password').val();
+
         const BASE_URL = 'http://localhost:3000/user';
          var user ={
              email: $("input#email").val(),

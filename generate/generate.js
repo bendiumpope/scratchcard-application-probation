@@ -1,13 +1,9 @@
 $(function(){
-
+    
+    //catching the DOM (table ID)
     var $dbOut = $("#dbOut");
 
-  
-    // function dataBase(pin){
-    //     $dbOut.append('<tr><td>'+pin.pin+'</td><td>'+pin.serial+
-    //     '</td><td>'+pin.date+'</td><td><button id='+pin.id+'class="view">View</button></td><td><button id='+pin.id+'class="dlt">Delete</button></td></tr>');
-    // }
-    
+    //Getting all details from the database and appending them on the table
     $.ajax({
         type:"GET",
         url:"http://localhost:3000/pin",
@@ -22,6 +18,7 @@ $(function(){
     });
 
 
+    //Generating recharge pin and serial No.
 $("#generate").on("click",function(e){
     e.preventDefault();
 
@@ -39,8 +36,9 @@ $("#generate").on("click",function(e){
     for (let i = 0; i < 10; i++ ) { 
         serial += serialVal[Math.floor(Math.random() * serialVal.length)]; 
     }
-    //Displaying Recharge Pin and Serial Number on Div on HTML page
+    //Displaying Recharge Pin and Serial Number on a Div on HTML page once generated
     $('#display').html('<h4>Recharge pin:'+' '+pin+'</h4>'+' '+''+''+'<h4>Serial Number:'+" "+serial+'</h4>');
+    
     var date = $("#date").val();
     var pin ={
         "pin": pin,
@@ -49,7 +47,7 @@ $("#generate").on("click",function(e){
     };
 
     
-
+//posting Recharge Pin and its details to the database (db.json)
     $.ajax({
         type:"POST",
         url:"http://localhost:3000/pin",
@@ -65,6 +63,8 @@ $("#generate").on("click",function(e){
     });  
     });
 
+
+    //The function appending the recharge pins and details from the db.json file on the table.
     function dataBase(pin){
         $dbOut.append('<tr><td>'+pin.id+'</td><td>'+pin.pin+'</td><td>'+pin.serial+
         '</td><td id="'
@@ -73,7 +73,9 @@ $("#generate").on("click",function(e){
         +pin.id+'">save</button>'+" "+'<button class="cancelEdit edit">Cancel</button></td></tr>');
        // console.log(pin.id);
     }
-     
+
+
+    //Deleting recharge pin and details from the database (db.json) 
     $dbOut.delegate(".dlt","click",function(e){
         e.preventDefault();
         
@@ -95,6 +97,8 @@ $("#generate").on("click",function(e){
         })
     })
 
+
+    //viewing individual recharge pin and serial number using ID
     $("#getForm").on("submit",function(e){
         e.preventDefault();
         var pinId =$("#pinId").val();
@@ -121,21 +125,24 @@ $("#generate").on("click",function(e){
     })
 });
 
+//Editing Recharge pin date
 $dbOut.delegate(".editDate","click",function(e){
     e.preventDefault();
     
-    tr=(this).closest("tr");
+   var tr=(this).closest("tr");
 
     $(tr).find('input.date').val($(tr).find('span.date').html());
     $(tr).addClass("edit");
 })
 
+//cancling the edit mode
 $dbOut.delegate(".cancelEdit","click",function(e){
     e.preventDefault();
  
     $(this).closest("tr").removeClass("edit");     
 })
 
+//saving the edited detail
 $dbOut.delegate(".saveEdit","click",function(e){
     e.preventDefault();
  
@@ -143,7 +150,6 @@ $dbOut.delegate(".saveEdit","click",function(e){
     var date = $(tr).find('input.date').val();
     var id = $(this).attr("id");
 
-    console.log(date);
     var pinArray=[];
     var serialArray=[];
     var idArray=[];
@@ -166,7 +172,7 @@ $dbOut.delegate(".saveEdit","click",function(e){
              
         }
 
-        // return console.log(pin.date);
+//posting Updated detail to database (db.json) using Ajax PUT command
 
     $.ajax({
         type:"PUT",

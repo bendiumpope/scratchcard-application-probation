@@ -116,16 +116,16 @@ body{
        
         width:10%;
         height:30px;
-    }
+    } 
 
     table tr .edit{
-        display:none;
+        display:none; 
     }
 
     table tr.edit .edit{
         display:initial;
     }
 
-    table tr.edit .noedit{
+    table tr.edit .noEdit{
         display:none;
     }

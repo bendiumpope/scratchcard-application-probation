@@ -1,5 +1,6 @@
 $(function(){ 
 
+    //validation using Recharge pin serial No.
     $("#form").on("submit",function(e){
         e.preventDefault();
         var input = $("input#validate").val();
